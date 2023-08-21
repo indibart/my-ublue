@@ -36,6 +36,8 @@ scripts:
     - autorun.sh
     # Manually listed scripts.
     # - example_post.sh
+    - tailscale.sh
+    - zabbix-agent.sh
 
     # Custom RPM configuration.
     # These changes will be integrated into your custom image at the "system level".
@@ -48,6 +50,8 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+    - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+    - https://repo.zabbix.com/zabbix/6.4/sles/15/x86_64/zabbix-release-6.4-1.sles15.noarch.rpm
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -64,6 +68,21 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
+    - borgbackup
+    - tailscale
+    - zabbix-agent2
+    - zabbix-agent2-plugin-*
+    - htop
+    - tree
+    - speech-dispatcher
+    - usbutils
+    - tmux
+    - vim
+    - neovim
+    - cockpit
+    - cockpit-pcp
+    - curl
+    - wget
 
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
@@ -88,4 +107,67 @@ firstboot:
   # This is just an example selection:
   flatpaks:
     - io.github.celluloid_player.Celluloid
+    - com.bitwarden.desktop
+    - com.discordapp.Discord
+    - com.github.alainm23.planner
+    - com.github.flxzt.rnote
+    - com.github.jeromerobert.pdfarranger
+    - com.github.junrrein.PDFSlicer
+    - com.github.marktext.marktext
+    - com.github.micahflee.torbrowser-launcher
+    - com.github.qarmin.czkawka
+    - com.github.tchx84.Flatseal
+    - com.github.xournalpp.xournalpp
+    - com.mattjakeman.ExtensionManager
+    - com.nextcloud.desktopclient.nextcloud
+    - com.spotify.Client
+    - com.transmissionbt.Transmission
+    - com.usebottles.bottles
+    - com.visualstudio.code
+    - com.vscodium.codium
+    - de.shorsh.discord-screenaudio
+    - dev.deedles.Trayscale
+    - fr.free.Homebank
+    - im.fluffychat.Fluffychat
+    - im.riot.Riot
+    - io.gitlab.adhami3310.Converter
+    - io.gitlab.adhami3310.Impression
+    - io.gitlab.theevilskeleton.Upscaler
+    - me.kozec.syncthingtk
+    - net.ankiweb.Anki
+    - net.danigm.timetrack
+    - org.chromium.Chromium
+    - org.gimp.GIMP
+    - org.gnome.Boxes
+    - org.gnome.Calculator
+    - org.gnome.Calendar
+    - org.gnome.Characters
+    - org.gnome.Cheese
+    - org.gnome.Contacts
+    - org.gnome.Evince
+    - org.gnome.FontManager
+    - org.gnome.Loupe
+    - org.gnome.Maps
+    - org.gnome.SimpleScan
+    - org.gnome.Solanum
+    - org.gnome.TextEditor
+    - org.gnome.Todo
+    - org.gnome.Totem
+    - org.gnome.baobab
+    - org.gnome.clocks
+    - org.gnome.eog
+    - org.gnome.gThumb
+    - org.gnome.seahorse.Application
+    - org.gottcode.Kapow
+    - org.inkscape.Inkscape
     - org.kde.krita
+    - org.libreoffice.LibreOffice
+    - org.mozilla.firefox
+    - org.nickvision.money
+    - org.remmina.Remmina
+    - org.signal.Signal
+    - org.telegram.desktop
+    - org.videolan.VLC
+    - org.wireshark.Wireshark
+    - org.zotero.Zotero
+    - us.zoom.Zoom
